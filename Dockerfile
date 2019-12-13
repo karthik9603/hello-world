@@ -1,7 +1,6 @@
-#This is a sample Image 
-FROM ubuntu 
-MAINTAINER demousr@gmail.com 
+# Pull base image 
+From tomcat:8-jre8 
 
-RUN apt-get update 
-RUN apt-get install –y nginx 
-CMD [“echo”,”Image created”]  
+# Maintainer 
+MAINTAINER "valaxytech@gmail.com" 
+COPY ./webapp.war /usr/local/tomcat/webapps
